@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularPractice';
+  tweet = {
+    body: '...',
+    likesCount: 10,
+    isActive: true
+  };
+
 }
