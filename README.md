@@ -25,9 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-ng new AngularPractice -- to create a new project
-ng serve -- to run the app
-ng g c course -- to create a component
-ng g s course -- to create course service
-npm install bootstrap --save  ---to install bootstrap
-npm install bootstrap-icons --save   --to install bootstrap icons
+## To create a new project
+ng new AngularPractice 
+## To run the app
+ng serve 
+## To create a component
+ng g c course 
+## To create course service
+ng g s course 
+## To install bootstrap
+npm install bootstrap --save  
+## To install bootstrap icons
+npm install bootstrap-icons --save  
