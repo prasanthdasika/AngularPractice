@@ -37,3 +37,7 @@ ng g s course
 npm install bootstrap --save  
 ## To install bootstrap icons
 npm install bootstrap-icons --save  
+## Sample JSON service
+this is a fake service <br/>
+jsonplaceholder.typicode.com <br/>,
+jsonplaceholder.typicode.com/posts <br/>

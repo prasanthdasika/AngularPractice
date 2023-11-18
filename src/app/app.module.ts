@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesServiceService } from './course/courses-service.service';
@@ -10,6 +10,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { LikeComponent } from './like/like.component';
 import { FormsModule } from '@angular/forms';
 import { ZippyComponent } from './zippy/zippy.component';
+import { PostsComponent } from './posts/posts.component';
+import { PostsService } from './posts/posts.service';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,13 @@ import { ZippyComponent } from './zippy/zippy.component';
     AuthorComponent,
     FavoriteComponent,
     LikeComponent,
-    ZippyComponent
+    ZippyComponent,
+    PostsComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, HttpClientModule
   ],
-  providers: [CoursesServiceService, AuthorService],
+  providers: [CoursesServiceService, AuthorService, PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
