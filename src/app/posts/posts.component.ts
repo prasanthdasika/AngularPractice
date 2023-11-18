@@ -26,12 +26,24 @@ export class PostsComponent implements OnInit {
     this.service.createPost(post).subscribe(response => {
       post['id'] = response.id;
       this.posts.splice(0, 0, post);
+    }, (error: Response) => {
+      if (error.status == 404)
+        alert("404 error occurred");
+      else
+        alert("An unexpected error occurred");
+      console.log(error);
     });
   }
 
   updatePost(post: any) {
     this.service.updatePost(post).subscribe(response => {
       console.log(response);
+    }, (error: Response) => {
+      if (error.status == 404)
+        alert("404 error occurred");
+      else
+        alert("An unexpected error occurred");
+      console.log(error);
     });
   }
 
@@ -39,6 +51,12 @@ export class PostsComponent implements OnInit {
     this.service.deletePost(post.id).subscribe(response => {
       let index = this.posts.indexOf(post);
       this.posts.splice(index, 1);
+    }, (error: Response) => {
+      if (error.status == 404)
+        alert("404 error occurred");
+      else
+        alert("An unexpected error occurred");
+      console.log(error);
     });
   }
 }
